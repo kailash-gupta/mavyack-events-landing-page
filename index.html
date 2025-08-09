@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mavyack Events - Creating Unforgettable Experiences</title>
+    <meta name="description" content="Professional event planning and management services for weddings, corporate events, birthdays, and special occasions.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/public/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/icon-16x16.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/icon-32x32.svg">
+    <link rel="apple-touch-icon" href="/public/apple-touch-icon.svg">
+    
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 
+    HEADER/NAVBAR SECTION
+    - To add new navigation items, copy a line like: <a href="#new-section" class="nav-link">New Section</a>
+    - Also add the corresponding mobile menu item below
+    - Update the logo path in img src if you change your logo
+    -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <!-- UPDATE LOGO PATH HERE if you change your logo file -->
+                <img src="public/mavyack-logo.png" alt="Mavyack Events Logo" class="nav-logo-img">
+                <span class="nav-logo-text">Mavyack <span class="orange">Events</span></span>
+            </a>
+            
+            <!-- MAIN NAVIGATION LINKS - Add new sections here -->
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#testimonials" class="nav-link">Testimonials</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            
+            <button class="mobile-menu-button" onclick="toggleMobileMenu()">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+        
+        <!-- MOBILE MENU - Add new navigation items here to match the main navigation -->
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="#home" class="mobile-nav-link active" onclick="closeMobileMenu()">Home</a>
+            <a href="#services" class="mobile-nav-link" onclick="closeMobileMenu()">Services</a>
+            <a href="#gallery" class="mobile-nav-link" onclick="closeMobileMenu()">Gallery</a>
+            <a href="#testimonials" class="mobile-nav-link" onclick="closeMobileMenu()">Testimonials</a>
+            <a href="#contact" class="mobile-nav-link" onclick="closeMobileMenu()">Contact</a>
+        </div>
+    </nav>
+
+      <!-- 
+    HERO SECTION
+    - Update the text content to match your brand messaging
+    - Change the premium tagline, main title, subtitle, and button text
+    - Update the statistics numbers and labels
+    - Change the emoji icons if desired
+    -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <!-- Premium tagline - Change this text -->
+            <div class="hero-premium">Premium Event Planning</div>
+            
+            <!-- Main title - Change this text (keep the <span class="orange"> for colored words) -->
+            <h1 class="hero-title">Creating Unforgettable <span class="orange">Experiences</span></h1>
+            
+            <!-- Subtitle - Change this descriptive text -->
+            <p class="hero-subtitle">Transform your vision into reality with our expert event planning services. From intimate gatherings to grand celebrations, we make every moment magical.</p>
+            
+            <!-- Hero buttons - Update button text and links -->
+            <div class="hero-buttons">
+                <a href="#services" class="btn-primary">Explore Our Services</a>
+                <a href="#contact" class="btn-secondary">Get In Touch</a>
+            </div>
+            
+            <!-- Statistics cards - Update numbers, labels, and emoji icons -->
+            <div class="hero-stats">
+                <div class="stat-card orange">
+                    <div class="stat-icon">📅</div>
+                    <div class="stat-number">300+</div>
+                    <div class="stat-label">Events Planned</div>
+                </div>
+                <div class="stat-card purple">
+                    <div class="stat-icon">😊</div>
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="stat-card blue">
+                    <div class="stat-icon">🏆</div>
+                    <div class="stat-number">30+</div>
+                    <div class="stat-label">Awards Won</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+    SERVICES SECTION
+    - To add new services: copy a service-card div and customize it
+    - Available icon colors: blue, green, red, orange, aqua, pink, purple, indigo, teal, yellow, rose, cyan, lime
+    - Available Lucide icons: https://lucide.dev/icons/
+    - Update the service title and description text
+    -->
+    <section id="services" class="section services-section">
+        <div class="section-title">
+            <h2><span class="black">Our</span> <span class="orange">Services</span></h2>
+            <p class="section-description">Comprehensive event planning and management services tailored to your unique needs</p>
+        </div>
+        
+        <!-- SERVICES GRID - Add/remove service cards here -->
+        <div class="services-grid">
+            <!-- EXAMPLE SERVICE CARD - Copy this structure to add new services -->
+            <div class="service-card cursor-glow">
+                <!-- Icon color: change class (blue, green, red, orange, aqua, pink, purple, indigo, teal, yellow, rose, cyan, lime) -->
+                <div class="service-icon blue">
+                    <!-- Icon: change data-lucide value (see Lucide icons link above) -->
+                    <i data-lucide="calendar"></i>
+                </div>
+                <!-- Service title - Update this text -->
+                <h3 class="service-title">Event Planning</h3>
+                <!-- Service description - Update this text -->
+                <p class="service-description">Full-scale event planning and management services including venue selection, scheduling, and coordination.</p>
+            </div>
+            
+            <div class="service-card cursor-glow">
+                <div class="service-icon green">
+                    <i data-lucide="map-pin"></i>
+                </div>
+                <h3 class="service-title">Venue Selection</h3>
+                <p class="service-description">Expert assistance in choosing the perfect venue that aligns with your event theme, size, and requirements.</p>
+            </div>
+            
+            <div class="service-card cursor-glow">
+                <div class="service-icon red">
+                    <i data-lucide="gift"></i>
+                </div>
+                <h3 class="service-title">Design And Decor</h3>
+                <p class="service-description">Creative design and decor services to transform spaces according to your event theme and vision.</p>
+            </div>
+            
+            <div class="service-card cursor-glow">
+                <div class="service-icon orange">
+                    <i data-lucide="heart"></i>
+                </div>
+                <h3 class="service-title">Wedding Events</h3>
+                <p class="service-description">Comprehensive wedding planning and coordination, creating magical moments for your special day.</p>
+            </div>
+            
+            <div class="service-card cursor-glow">
+                <div class="service-icon aqua">
+                    <i data-lucide="building-2"></i>
+                </div>
+                <h3 class="service-title">Corporate Events</h3>
+                <p class="service-description">Professional corporate event management for conferences, seminars, and team buildings.</p>
+            </div>
+            
+            <div class="service-card cursor-glow">
+                <div class="service-icon pink">
+                    <i data-lucide="heart-handshake"></i>
+                </div>
+                <h3 class="service-title">Charity Events</h3>
+                <p class="service-description">Comprehensive planning for fundraisers and charitable events, maximizing impact and support for noble causes.</p>
+            </div>
+            
+            <div class="service-card cursor-glow">
+                <div class="service-icon purple">
+                    <i data-lucide="home"></i>
+                </div>
+                <h3 class="service-title">House Parties</h3>
+                <p class="service-description">Personalized planning for private house parties, ensuring seamless experiences without the stress of organizing.</p>
+            </div>
+            
+            <div class="service-card cursor-glow">
+                <div class="service-icon indigo">
+                    <i data-lucide="users"></i>
+                </div>
+                <h3 class="service-title">Reunions Events</h3>
+                <p class="service-description">Tailored coordination for family, school, or alumni reunions, fostering connections and creating memories.</p>
+            </div>
+            
+            <div class="service-card cursor-glow">
+                <div class="service-icon teal">
+                    <i data-lucide="cake"></i>
+                </div>
+                <h3 class="service-title">Birthday Events</h3>
+                <p class="service-description">Customized birthday celebrations with unique themes, entertainment, and memorable experiences.</p>
+            </div>
+            
+            <div class="service-card cursor-glow">
+                <div class="service-icon yellow">
+                    <i data-lucide="music"></i>
+                </div>
+                <h3 class="service-title">Festival Events</h3>
+                <p class="service-description">Large-scale festival organization for cultural and entertainment events.</p>
+            </div>
+            
+            <div class="service-card cursor-glow">
+                <div class="service-icon rose">
+                    <i data-lucide="champagne"></i>
+                </div>
+                <h3 class="service-title">Anniversary Events</h3>
+                <p class="service-description">Special anniversary celebrations with personalized touches and memorable moments.</p>
+            </div>
+            
+            <div class="service-card cursor-glow">
+                <div class="service-icon cyan">
+                    <i data-lucide="megaphone"></i>
+                </div>
+                <h3 class="service-title">Promotional Events</h3>
+                <p class="service-description">Strategic planning and execution of promotional events for product launches and marketing campaigns.</p>
+            </div>
+            
+            <div class="service-card cursor-glow">
+                <div class="service-icon lime">
+                    <i data-lucide="users-2"></i>
+                </div>
+                <h3 class="service-title">Event Staffing</h3>
+                <p class="service-description">Professional event staff including servers, hosts, security, and coordination personnel.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mid-Page CTA Banner -->
+    <section class="cta-banner">
+        <div class="container">
+            <h2>Ready to Create Something Amazing?</h2>
+            <p>Let's bring your vision to life with our expert event planning services</p>
+            <a href="#contact" class="btn-secondary">Get Started Today</a>
+        </div>
+    </section>
+
+    <!-- 
+    GALLERY SECTION
+    - Gallery items are populated by JavaScript (see script.js)
+    - To add new gallery categories: add a new filter button below
+    - To add new images: update the galleryData array in script.js
+    -->
+    <section id="gallery" class="section gallery-section">
+        <div class="section-title">
+            <h2><span class="black">Event</span> <span class="orange">Gallery</span></h2>
+            <p class="section-description">Explore our portfolio of unforgettable events and celebrations</p>
+        </div>
+        
+            <!-- GALLERY FILTERS - Add new category buttons here -->
+        <div class="gallery-filters">
+            <button class="gallery-filter active" onclick="filterGallery('All')">All</button>
+            <button class="gallery-filter" onclick="filterGallery('Corporate')">Corporate</button>
+            <button class="gallery-filter" onclick="filterGallery('Wedding')">Wedding</button>
+            <button class="gallery-filter" onclick="filterGallery('Birthday')">Birthday</button>
+            <button class="gallery-filter" onclick="filterGallery('Festival')">Festival</button>
+            <button class="gallery-filter" onclick="filterGallery('Gala')">Gala</button>
+            <button class="gallery-filter" onclick="filterGallery('Anniversary')">Anniversary</button>
+            <!-- To add new category: <button class="gallery-filter" onclick="filterGallery('NewCategory')">New Category</button> -->
+        </div>
+        
+        <div class="gallery-grid" id="gallery-grid">
+            <!-- Gallery items will be populated by JavaScript -->
+        </div>
+        
+        <div class="view-gallery-btn">
+            <a href="https://example.com/full-gallery" target="_blank" class="btn-primary">View Complete Gallery</a>
+        </div>
+    </section>
+
+    <!-- 
+    TESTIMONIALS SECTION
+    - Testimonials are populated by JavaScript (see script.js)
+    - To add new testimonials: update the testimonials array in script.js
+    -->
+    <section id="testimonials" class="section testimonials-section">
+        <div class="section-title">
+            <h2><span class="black">What Our</span> <span class="orange">Clients Say</span></h2>
+            <p class="section-description">Hear from our satisfied clients about their unforgettable experiences</p>
+        </div>
+        
+        <div class="testimonials-grid" id="testimonials-grid">
+            <!-- Testimonials will be populated by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Bottom CTA Banner -->
+    <section class="cta-banner">
+        <div class="container">
+            <h2>Let's Create Your Perfect Event</h2>
+            <p>Contact us today to start planning your unforgettable experience</p>
+            <a href="#contact" class="btn-secondary">Contact Us Now</a>
+        </div>
+    </section>
+
+    <!-- 
+    CONTACT SECTION
+    - Update contact information (email, phone, address, business hours)
+    - Change form fields if needed
+    - Update the form submission handler in script.js if you change the form
+    -->
+    <section id="contact" class="section contact-section">
+        <div class="section-title">
+            <h2><span class="black">Get In</span> <span class="orange">Touch</span></h2>
+            <p class="section-description">Ready to create your unforgettable experience? Let's start planning together.</p>
+        </div>
+        
+        <div class="contact-container">
+            <!-- CONTACT INFORMATION - Update all your contact details here -->
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                
+                <!-- EMAIL - Update email address -->
+                <div class="contact-item">
+                    <i data-lucide="mail"></i>
+                    <div class="contact-item-content">
+                        <h4>Email</h4>
+                        <!-- UPDATE EMAIL ADDRESS HERE -->
+                        <a href="mailto:hello@mavyackevents.com?subject=Event Inquiry&body=Hi Mavyack Events, I'm interested in your event planning services." class="hover:text-orange-600 transition-colors">hello@mavyackevents.com</a>
+                    </div>
+                </div>
+                
+                <!-- PHONE - Update phone number -->
+                <div class="contact-item">
+                    <i data-lucide="phone"></i>
+                    <div class="contact-item-content">
+                        <h4>Phone</h4>
+                        <!-- UPDATE PHONE NUMBER HERE -->
+                        <a href="tel:+15551234567" class="hover:text-orange-600 transition-colors">+1 (555) 123-4567</a>
+                    </div>
+                </div>
+                
+                <!-- LOCATION - Update address -->
+                <div class="contact-item">
+                    <i data-lucide="map-pin"></i>
+                    <div class="contact-item-content">
+                        <h4>Location</h4>
+                        <!-- UPDATE ADDRESS HERE -->
+                        <p>123 Event Street<br>Celebration City, CC 12345</p>
+                    </div>
+                </div>
+                
+                <!-- BUSINESS HOURS - Update hours -->
+                <div class="contact-item">
+                    <i data-lucide="clock"></i>
+                    <div class="contact-item-content">
+                        <h4>Business Hours</h4>
+                        <!-- UPDATE BUSINESS HOURS HERE -->
+                        <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CONTACT FORM - Update form fields and submission handling if needed -->
+            <div class="contact-form">
+                <!-- Form submission handled by handleFormSubmit() in script.js -->
+                <form onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Mavyack Events</h3>
+                <p>Creating unforgettable experiences for every occasion. Professional event planning and management services tailored to your unique vision.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul class="footer-links">
+                    <li><a href="mailto:hello@mavyackevents.com">hello@mavyackevents.com</a></li>
+                    <li><a href="tel:+15551234567">+1 (555) 123-4567</a></li>
+                    <li><a href="#">123 Event Street, Celebration City, CC 12345</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div style="display: flex; gap: 1rem;">
+                    <a href="#" style="color: #ccc; font-size: 1.5rem;"><i data-lucide="facebook"></i></a>
+                    <a href="#" style="color: #ccc; font-size: 1.5rem;"><i data-lucide="instagram"></i></a>
+                    <a href="#" style="color: #ccc; font-size: 1.5rem;"><i data-lucide="twitter"></i></a>
+                    <a href="#" style="color: #ccc; font-size: 1.5rem;"><i data-lucide="linkedin"></i></a>
+                    <a href="#" style="color: #ccc; font-size: 1.5rem;"><i data-lucide="pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Mavyack Events. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <img class="lightbox-image" id="lightbox-image" src="" alt="">
+            <div class="lightbox-info">
+                <h3 class="lightbox-title" id="lightbox-title"></h3>
+                <p class="lightbox-category" id="lightbox-category"></p>
+            </div>
+            <button class="lightbox-nav lightbox-prev" onclick="prevImage()">
+                <i data-lucide="chevron-left"></i>
+            </button>
+            <button class="lightbox-nav lightbox-next" onclick="nextImage()">
+                <i data-lucide="chevron-right"></i>
+            </button>
+            <button class="lightbox-close" onclick="closeLightbox()">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- SVG Symbols for Feedback Reactions -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 4" id="eye">
+            <path d="M1,1 C1.83333333,2.16666667 2.66666667,2.75 3.5,2.75 C4.33333333,2.75 5.16666667,2.16666667 6,1"></path>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 7" id="mouth">
+            <path d="M1,5.5 C3.66666667,2.5 6.33333333,1 9,1 C11.6666667,1 14.3333333,2.5 17,5.5"></path>
+        </symbol>
+    </svg>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
