@@ -2,9 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#FF6B00">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Mavyack Events">
+    <meta name="msapplication-TileColor" content="#FF6B00">
+    <meta name="msapplication-config" content="/browserconfig.xml">
     <title>Mavyack Events - Creating Unforgettable Experiences</title>
     <meta name="description" content="Professional event planning and management services for weddings, corporate events, birthdays, and special occasions.">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mavyack Events - Creating Unforgettable Experiences">
+    <meta property="og:description" content="Professional event planning and management services for weddings, corporate events, birthdays, and special occasions.">
+    <meta property="og:image" content="/public/mavyack-logo.png">
+    <meta property="og:url" content="https://mavyackevents.com">
+    <meta property="og:site_name" content="Mavyack Events">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mavyack Events - Creating Unforgettable Experiences">
+    <meta name="twitter:description" content="Professional event planning and management services for weddings, corporate events, birthdays, and special occasions.">
+    <meta name="twitter:image" content="/public/mavyack-logo.png">
+    <meta name="twitter:site" content="@mavyackevents">
+    
+    <!-- Additional SEO -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="author" content="Mavyack Events">
+    <link rel="canonical" href="https://mavyackevents.com">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/public/favicon.ico">
@@ -236,6 +268,9 @@
         </div>
     </section>
 
+    <!-- Spacing before next section -->
+    <div class="section-spacing"></div>
+
     <!-- Mid-Page CTA Banner -->
     <section class="cta-banner">
         <div class="container">
@@ -244,6 +279,9 @@
             <a href="#contact" class="btn-secondary">Get Started Today</a>
         </div>
     </section>
+
+    <!-- Spacing before next section -->
+    <div class="section-spacing"></div>
 
     <!-- 
     GALLERY SECTION
@@ -278,6 +316,9 @@
         </div>
     </section>
 
+    <!-- Spacing before next section -->
+    <div class="section-spacing"></div>
+
     <!-- 
     TESTIMONIALS SECTION
     - Testimonials are populated by JavaScript (see script.js)
@@ -294,6 +335,9 @@
         </div>
     </section>
 
+    <!-- Spacing before next section -->
+    <div class="section-spacing"></div>
+
     <!-- Bottom CTA Banner -->
     <section class="cta-banner">
         <div class="container">
@@ -302,6 +346,9 @@
             <a href="#contact" class="btn-secondary">Contact Us Now</a>
         </div>
     </section>
+
+    <!-- Spacing before footer -->
+    <div class="section-spacing"></div>
 
     <!-- 
     CONTACT SECTION
@@ -391,6 +438,9 @@
         </div>
     </section>
 
+    <!-- Spacing before footer -->
+    <div class="section-spacing" style="margin: 1rem 0;"></div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
@@ -435,26 +485,6 @@
             <p>&copy; 2024 Mavyack Events. All rights reserved.</p>
         </div>
     </footer>
-
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-        <div class="lightbox-content">
-            <img class="lightbox-image" id="lightbox-image" src="" alt="">
-            <div class="lightbox-info">
-                <h3 class="lightbox-title" id="lightbox-title"></h3>
-                <p class="lightbox-category" id="lightbox-category"></p>
-            </div>
-            <button class="lightbox-nav lightbox-prev" onclick="prevImage()">
-                <i data-lucide="chevron-left"></i>
-            </button>
-            <button class="lightbox-nav lightbox-next" onclick="nextImage()">
-                <i data-lucide="chevron-right"></i>
-            </button>
-            <button class="lightbox-close" onclick="closeLightbox()">
-                <i data-lucide="x"></i>
-            </button>
-        </div>
-    </div>
 
     <!-- SVG Symbols for Feedback Reactions -->
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">

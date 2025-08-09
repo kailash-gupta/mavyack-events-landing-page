@@ -250,7 +250,7 @@ function renderGallery() {
     
     // Generate HTML for each gallery item
     galleryGrid.innerHTML = filteredImages.map((image, index) => `
-        <div class="gallery-item cursor-glow" onclick="openLightbox(${index})">
+        <div class="gallery-item cursor-glow">
             <img src="${image.url}" alt="${image.title}" loading="lazy">
             <div class="gallery-overlay">
                 <h3 class="gallery-title">${image.title}</h3>
@@ -438,82 +438,6 @@ class StarRating {
     }
 }
 
-// Lightbox functions
-function openLightbox(index) {
-    currentImageIndex = index;
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImage = document.getElementById('lightbox-image');
-    const lightboxTitle = document.getElementById('lightbox-title');
-    const lightboxCategory = document.getElementById('lightbox-category');
-    
-    if (filteredImages[index]) {
-        // Preload image
-        const img = new Image();
-        img.onload = function() {
-            lightboxImage.src = this.src;
-            lightboxImage.alt = filteredImages[index].title;
-            lightboxTitle.textContent = filteredImages[index].title;
-            lightboxCategory.textContent = filteredImages[index].category;
-            
-            // Show lightbox with fade effect
-            lightbox.style.display = 'flex';
-            setTimeout(() => {
-                lightbox.classList.add('active');
-            }, 10);
-            
-            // Prevent body scroll
-            document.body.style.overflow = 'hidden';
-        };
-        img.src = filteredImages[index].url;
-    }
-}
-
-function closeLightbox() {
-    const lightbox = document.getElementById('lightbox');
-    lightbox.classList.remove('active');
-    
-    // Wait for transition to complete before hiding
-    setTimeout(() => {
-        lightbox.style.display = 'none';
-        // Restore body scroll
-        document.body.style.overflow = 'auto';
-    }, 300);
-}
-
-function nextImage() {
-    currentImageIndex = (currentImageIndex + 1) % filteredImages.length;
-    updateLightboxImage();
-}
-
-function prevImage() {
-    currentImageIndex = (currentImageIndex - 1 + filteredImages.length) % filteredImages.length;
-    updateLightboxImage();
-}
-
-function updateLightboxImage() {
-    const lightboxImage = document.getElementById('lightbox-image');
-    const lightboxTitle = document.getElementById('lightbox-title');
-    const lightboxCategory = document.getElementById('lightbox-category');
-    
-    if (filteredImages[currentImageIndex]) {
-        // Add loading state
-        lightboxImage.style.opacity = '0.5';
-        
-        // Preload new image
-        const img = new Image();
-        img.onload = function() {
-            lightboxImage.src = this.src;
-            lightboxImage.alt = filteredImages[currentImageIndex].title;
-            lightboxTitle.textContent = filteredImages[currentImageIndex].title;
-            lightboxCategory.textContent = filteredImages[currentImageIndex].category;
-            
-            // Fade in new image
-            lightboxImage.style.opacity = '1';
-        };
-        img.src = filteredImages[currentImageIndex].url;
-    }
-}
-
 // Form submission - HANDLE CONTACT FORM PROCESSING
 function handleFormSubmit(event) {
     event.preventDefault();
@@ -547,31 +471,6 @@ function openWhatsApp() {
     window.open(whatsappUrl, '_blank');
 }
 
-// Keyboard navigation for lightbox
-document.addEventListener('keydown', function(event) {
-    const lightbox = document.getElementById('lightbox');
-    if (lightbox && lightbox.classList.contains('active')) {
-        switch(event.key) {
-            case 'Escape':
-                closeLightbox();
-                break;
-            case 'ArrowLeft':
-                prevImage();
-                break;
-            case 'ArrowRight':
-                nextImage();
-                break;
-        }
-    }
-});
-
-// Close lightbox when clicking outside the image
-document.getElementById('lightbox').addEventListener('click', function(event) {
-    if (event.target === this) {
-        closeLightbox();
-    }
-});
-
 // Mobile menu close when clicking outside
 document.addEventListener('click', function(event) {
     const mobileMenu = document.getElementById('mobile-menu');
@@ -586,9 +485,5 @@ document.addEventListener('click', function(event) {
 window.toggleMobileMenu = toggleMobileMenu;
 window.closeMobileMenu = closeMobileMenu;
 window.filterGallery = filterGallery;
-window.openLightbox = openLightbox;
-window.closeLightbox = closeLightbox;
-window.nextImage = nextImage;
-window.prevImage = prevImage;
 window.handleFormSubmit = handleFormSubmit;
 window.openWhatsApp = openWhatsApp;
