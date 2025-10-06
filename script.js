@@ -129,7 +129,7 @@ const testimonials = [
 },
 {
     id: 2,
-    name: 'Sujal Rup Bhul',
+    name: 'Sujal Kailash Gupta',
     role: 'Manager',
     content: 'mavryk events transformed our office with vibrant, cheerful decorations! As Office Manager, Sujal Bhul, I highly recommend their professional and creative team for any event or office uplift.',
     rating: 5,
