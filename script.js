@@ -129,9 +129,9 @@ const testimonials = [
 },
 {
     id: 2,
-    name: 'Sujal TESTING 123456',
+    name: 'Sujal Rup Bhul',
     role: 'Manager',
-    content: mavryk events transformed our office with vibrant, cheerful decorations! As Office Manager, Sujal Bhul, I highly recommend their professional and creative team for any event or office uplift.,
+    content: 'mavryk events transformed our office with vibrant, cheerful decorations! As Office Manager, Sujal Bhul, I highly recommend their professional and creative team for any event or office uplift.',
     rating: 5,
     avatar: 'https://lh3.googleusercontent.com/pw/AP1GczMh_cwKLykcURyJ3sbtpA6XUE132b9Z31e054ChttZNIgAeek-xXple4oKLGnbRoEkLyyo8ClIdUh2UgvQRIQsK8Q2vO0PLiG3cov2Q9Zb6D1GxgVxYOlSdaTrLIU8MlxacVVi8OmsGHOhSXB6maUCn=w1140-h641-s-no-gm?authuser=0'
 },
